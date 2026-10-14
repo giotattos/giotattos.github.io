@@ -409,7 +409,7 @@ ul{ margin:0; padding:0; list-style:none; }
   will-change:opacity,transform,filter;
 }
 .revelar.is-dentro{
-  opacity:1; transform:none; filter:blur(0);
+  opacity:1; transform:none; filter:none;
 }
 
 /* surge através da névoa — seção 02 */
@@ -1102,10 +1102,14 @@ ul{ margin:0; padding:0; list-style:none; }
     0 14px 34px rgba(0,0,0,.6);
 }
 .historia__retrato img{
+  transition:opacity .5s ease;
   width:100%; aspect-ratio:1/1; object-fit:cover;
   border-radius:2px;
   box-shadow:inset 0 0 0 1px rgba(195,164,113,.28);
 }
+
+/* enquanto a foto nova nao esta pronta, a anterior nao pode aparecer */
+.historia__retrato img.is-trocando{ opacity:0; }
 
 .historia__titulo{
   margin:0 0 clamp(12px,1.4vw,18px);
@@ -2271,4 +2275,47 @@ ul{ margin:0; padding:0; list-style:none; }
 
   /* menos camadas compostas no carrossel */
   .cartao{ box-shadow:none; }
+}
+
+
+/* =========================================================
+   PORTFOLIO NO CELULAR
+   ---------------------------------------------------------
+   A fita anda sozinha, entao tudo que fica "por cima" dela
+   (filtro, mascara, desfoque) e refeito a cada quadro.
+   Aqui sai o que repinta; a composicao continua a mesma.
+   ========================================================= */
+@media (max-width:980px), (hover:none) and (pointer:coarse){
+
+  /* nada de desfoque nas revelacoes: so opacidade e deslocamento */
+  .revelar,
+  .revelar-nevoa{
+    filter:none !important;
+    will-change:auto;
+  }
+
+  /* o cartao nao usa mais filtro; o destaque e so a escala */
+  .cartao{
+    filter:none;
+    transition:transform .9s cubic-bezier(.2,.7,.25,1);
+  }
+  .cartao.is-destaque,
+  .cartao:hover{ filter:none; }
+
+  /* sem mascara em movimento: dois degrades fixos nas bordas fazem o mesmo */
+  .carrossel__janela{
+    -webkit-mask-image:none;
+            mask-image:none;
+    position:relative;
+  }
+  .carrossel__janela::before,
+  .carrossel__janela::after{
+    content:""; position:absolute; top:0; bottom:0; width:9%;
+    z-index:6; pointer-events:none;
+  }
+  .carrossel__janela::before{ left:0;  background:linear-gradient(90deg, rgba(6,8,16,.92), rgba(6,8,16,0)); }
+  .carrossel__janela::after { right:0; background:linear-gradient(270deg, rgba(6,8,16,.92), rgba(6,8,16,0)); }
+
+  /* a fita vira uma camada propria, movida so pela GPU */
+  .carrossel__trilho{ will-change:transform; backface-visibility:hidden; }
 }

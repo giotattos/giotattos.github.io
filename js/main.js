@@ -196,6 +196,14 @@
     function quadroBruma(agora) {
       if (!larg && !medir()) { requestAnimationFrame(quadroBruma); return; }
 
+      // barra recolhida: ninguem ve a nevoa, entao nao se gasta GPU nela.
+      // (isto roda enquanto a pessoa rola o portfolio, que e quando pesa)
+      if (elNav && elNav.classList.contains("is-recolhida")) {
+        t0 = 0;                      // a animacao retoma sem salto
+        requestAnimationFrame(quadroBruma);
+        return;
+      }
+
       // quem pediu menos movimento recebe a névoa parada, não a ausência dela
       if (consultaCalma.matches) {
         pintar(0, AMBIENTE * 2.2);
@@ -493,7 +501,7 @@
 
     art.innerHTML =
       '<div class="mold__janela">' +
-      '<img src="' + tattoo.arquivo + '" alt="' + escapar(tattoo.alt) + '" loading="lazy" draggable="false">' +
+      '<img src="' + tattoo.arquivo + '" alt="' + escapar(tattoo.alt) + '" loading="lazy" decoding="async" draggable="false">' +
       "</div>" +
       '<span class="mold__arte" aria-hidden="true"></span>' +
       '<span class="cartao__etiqueta">clique para conhecer a história</span>';
@@ -746,13 +754,43 @@
   const painelSai   = $("#historiaFechar");
   let cartaoAberto  = null;
 
+  let tokenFoto = 0;
+
+  // baixa E decodifica fora da tela; resolve true/false, nunca rejeita
+  function carregarImagem(url) {
+    return new Promise((resolve) => {
+      const img = new Image();
+      img.onload = () => {
+        if (img.decode) img.decode().then(() => resolve(true), () => resolve(true));
+        else resolve(true);
+      };
+      img.onerror = () => resolve(false);
+      img.src = url;
+    });
+  }
+
   function abrirHistoria(indice) {
     if (!painel || !window.DADOS) return;
     const t = DADOS.tattoos[indice];
     if (!t) return;
 
-    painelImg.src = t.arquivoAlta || t.arquivo;
+    // A foto grande demora; enquanto isso o navegador mostraria a ANTERIOR.
+    // Entao: some, mostra a miniatura (ja em cache, o cartao acabou de usar),
+    // e so troca pela grande quando ela estiver baixada e decodificada.
+    const token = ++tokenFoto;
+    painelImg.classList.add("is-trocando");
     painelImg.alt = t.alt;
+
+    carregarImagem(t.arquivo).then(() => {
+      if (token !== tokenFoto) return;                 // clicou em outra no meio
+      painelImg.src = t.arquivo;
+      painelImg.classList.remove("is-trocando");
+      if (t.arquivoAlta && t.arquivoAlta !== t.arquivo) {
+        return carregarImagem(t.arquivoAlta).then((ok) => {
+          if (ok && token === tokenFoto) painelImg.src = t.arquivoAlta;
+        });
+      }
+    });
     painelTit.textContent = t.titulo;
 
     const emParagrafos = (texto) =>

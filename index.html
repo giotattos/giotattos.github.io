@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Giovanna Reis Tattoos</title>
+<link rel="icon" href="assets/logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=50">
+</head>
+<body>
+
+<!-- ============ FUNDO GLOBAL ============ -->
+<div class="fundo" aria-hidden="true"></div>
+<div class="fundo-veu" aria-hidden="true"></div>
+<div class="poeira" aria-hidden="true"></div>
+
+<!-- ============ NAVEGAÇÃO GLOBAL (estilo da seção 01) ============ -->
+<header class="nav" id="nav">
+  <canvas class="nav__bruma" id="navBruma" aria-hidden="true"></canvas>
+
+  <div class="nav__moldura">
+    <span class="nav__floreio nav__floreio--esq" aria-hidden="true">
+      <svg viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M118 45H74" stroke="currentColor" stroke-width="1.1"/>
+        <path d="M74 45c-6-10-16-16-24-12-7 3-7 12-1 15 7 3 13-3 11-10-3-11-16-16-26-11" stroke="currentColor" stroke-width="1.1"/>
+        <path d="M74 45c-6 10-16 16-24 12-7-3-7-12-1-15 7-3 13 3 11 10-3 11-16 16-26 11" stroke="currentColor" stroke-width="1.1"/>
+        <path d="M34 20c-8 4-10 13-6 20M34 70c-8-4-10-13-6-20" stroke="currentColor" stroke-width="1"/>
+        <path d="M22 45l5-14 5 14-5 14-5-14z" fill="currentColor" opacity=".85"/>
+        <circle cx="60" cy="45" r="2.1" fill="var(--rubi)"/>
+      </svg>
+    </span>
+
+    <div class="nav__linhas">
+      <span class="nav__regua nav__regua--cima"></span>
+
+      <nav class="nav__links" aria-label="Navegação principal">
+        <a href="#inicio" class="nav__link is-ativo" data-secao="inicio">Início</a>
+        <a href="#artista" class="nav__link" data-secao="artista">A Artista</a>
+        <span class="nav__selo" aria-hidden="true">
+          <svg viewBox="0 0 90 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M52 35a16 16 0 11-14-15.9A13 13 0 0052 35z" fill="currentColor"/>
+            <path d="M66 28l1.6 4.6 4.6 1.6-4.6 1.6L66 40.4 64.4 35.8 59.8 34.2l4.6-1.6L66 28z" fill="var(--rubi)"/>
+            <path d="M74 44l1 2.8 2.8 1-2.8 1-1 2.8-1-2.8-2.8-1 2.8-1 1-2.8z" fill="currentColor" opacity=".7"/>
+            <path d="M22 22l.9 2.6 2.6.9-2.6.9-.9 2.6-.9-2.6-2.6-.9 2.6-.9.9-2.6z" fill="var(--rubi)" opacity=".8"/>
+          </svg>
+        </span>
+        <a href="#portfolio" class="nav__link" data-secao="portfolio">Portfólio</a>
+        <a href="#memorias" class="nav__link" data-secao="memorias">Memórias</a>
+        <a href="#avaliacoes" class="nav__link" data-secao="avaliacoes">Avaliações</a>
+        <a href="#ideias" class="nav__link" data-secao="ideias">Contato</a>
+      </nav>
+
+      <span class="nav__regua nav__regua--baixo"></span>
+    </div>
+
+    <span class="nav__floreio nav__floreio--dir" aria-hidden="true">
+      <svg viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 45h44" stroke="currentColor" stroke-width="1.1"/>
+        <path d="M46 45c6-10 16-16 24-12 7 3 7 12 1 15-7 3-13-3-11-10 3-11 16-16 26-11" stroke="currentColor" stroke-width="1.1"/>
+        <path d="M46 45c6 10 16 16 24 12 7-3 7-12 1-15-7-3-13 3-11 10 3 11 16 16 26 11" stroke="currentColor" stroke-width="1.1"/>
+        <path d="M86 20c8 4 10 13 6 20M86 70c8-4 10-13 6-20" stroke="currentColor" stroke-width="1"/>
+        <path d="M98 45l-5-14-5 14 5 14 5-14z" fill="currentColor" opacity=".85"/>
+        <circle cx="60" cy="45" r="2.1" fill="var(--rubi)"/>
+      </svg>
+    </span>
+  </div>
+
+  <button class="nav__chave" id="navChave" aria-label="Abrir menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+<!-- ============ 01 — TELA INICIAL ============ -->
+<section class="secao secao--inicio" id="inicio" data-secao="inicio">
+
+  <!-- ===== parceria: Tiagão Tattoo Crew ===== -->
+  <aside class="parceria revelar" data-atraso="520">
+    <p class="parceria__rotulo">Em parceria com</p>
+
+    <div class="parceria__selo">
+      <span class="parceria__canto parceria__canto--no" aria-hidden="true"></span>
+      <span class="parceria__canto parceria__canto--ne" aria-hidden="true"></span>
+      <span class="parceria__canto parceria__canto--so" aria-hidden="true"></span>
+      <span class="parceria__canto parceria__canto--se" aria-hidden="true"></span>
+      <img src="assets/parceiro-tiagao.webp" alt="Tiagão Tattoo Crew" loading="lazy">
+    </div>
+
+    <div class="parceria__contatos">
+      <a class="parceria__bolha" data-wa="parceiro" href="#" rel="noopener"
+         aria-label="WhatsApp do Tiagão Tattoo Crew">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5.1-1.3A10 10 0 1012 2zm0 1.8a8.2 8.2 0 11-4.2 15.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0112 3.8zm-3.3 4c-.2 0-.5.1-.7.4-.3.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.8 4.3 3.8 2.1.8 2.5.7 3 .6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3l-1.7-.8c-.2-.1-.4-.2-.6.1l-.8 1c-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5 0-.2 0-.4-.1-.5l-.8-1.9c-.2-.4-.4-.4-.6-.4h-.6z"/></svg>
+      </a>
+
+      <span class="parceria__estrela" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.2 7.8L22 11l-7.8 2.2L12 21l-2.2-7.8L2 11l7.8-2.2L12 1z"/></svg>
+      </span>
+
+      <a class="parceria__bolha" href="https://instagram.com/tiagaotattoocrew"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Instagram do Tiagão Tattoo Crew">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <rect x="3" y="3" width="18" height="18" rx="5.2"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor" stroke="none"/>
+        </svg>
+      </a>
+    </div>
+  </aside>
+
+  <div class="inicio">
+
+    <div class="inicio__selo mold mold--circ revelar" data-atraso="0">
+      <div class="mold__janela">
+        <img src="assets/logo.webp" alt="Selo Giovanna Reis Tattoo — gato preto com lua e agulha">
+      </div>
+      <span class="mold__arte" aria-hidden="true"></span>
+    </div>
+
+    <div class="inicio__titulo revelar" data-atraso="140">
+      <h1 class="inicio__nome">Giovanna Reis</h1>
+      <div class="inicio__sub">
+        <span class="inicio__filete" aria-hidden="true"></span>
+        <span class="inicio__tatuagens">Tattoos</span>
+        <span class="inicio__filete inicio__filete--inv" aria-hidden="true"></span>
+      </div>
+      <span class="inicio__luaInferior" aria-hidden="true">
+        <svg viewBox="0 0 40 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 13a8 8 0 11-7-7.9A6.5 6.5 0 0024 13z" fill="currentColor"/>
+        </svg>
+      </span>
+    </div>
+
+    <div class="inicio__contatos revelar" data-atraso="320">
+
+      <a class="placa" href="#" data-wa="hero" rel="noopener">
+        <span class="placa__canto placa__canto--ne" aria-hidden="true"></span>
+        <span class="placa__canto placa__canto--se" aria-hidden="true"></span>
+        <span class="placa__botao placa__botao--esq" aria-hidden="true"></span>
+        <span class="placa__botao placa__botao--dir" aria-hidden="true"></span>
+        <span class="placa__linha" aria-hidden="true"></span>
+        <span class="placa__icone" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5.1-1.3A10 10 0 1012 2zm0 1.8a8.2 8.2 0 11-4.2 15.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0112 3.8zm-3.3 4c-.2 0-.5.1-.7.4-.3.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.8 4.3 3.8 2.1.8 2.5.7 3 .6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3l-1.7-.8c-.2-.1-.4-.2-.6.1l-.8 1c-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5 0-.2 0-.4-.1-.5l-.8-1.9c-.2-.4-.4-.4-.6-.4h-.6z"/></svg>
+        </span>
+        <span class="placa__texto">WhatsApp</span>
+      </a>
+
+      <a class="placa" href="https://instagram.com/gio.tattooink" target="_blank" rel="noopener noreferrer">
+        <span class="placa__canto placa__canto--ne" aria-hidden="true"></span>
+        <span class="placa__canto placa__canto--se" aria-hidden="true"></span>
+        <span class="placa__botao placa__botao--esq" aria-hidden="true"></span>
+        <span class="placa__botao placa__botao--dir" aria-hidden="true"></span>
+        <span class="placa__linha" aria-hidden="true"></span>
+        <span class="placa__icone" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+            <rect x="3" y="3" width="18" height="18" rx="5.2"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor" stroke="none"/>
+          </svg>
+        </span>
+        <span class="placa__texto">Instagram</span>
+      </a>
+
+      <a class="placa" href="https://www.tiktok.com/@giovannareis.tattoo?_r=1&amp;_t=ZS-9AU5T5b7Vcj" target="_blank" rel="noopener noreferrer">
+        <span class="placa__canto placa__canto--ne" aria-hidden="true"></span>
+        <span class="placa__canto placa__canto--se" aria-hidden="true"></span>
+        <span class="placa__botao placa__botao--esq" aria-hidden="true"></span>
+        <span class="placa__botao placa__botao--dir" aria-hidden="true"></span>
+        <span class="placa__linha" aria-hidden="true"></span>
+        <span class="placa__icone" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.1 2h-2.8v13.1a2.4 2.4 0 11-2.4-2.4c.2 0 .5 0 .7.1v-2.8a5.6 5.6 0 00-.7 0A5.2 5.2 0 1016 15.1V8.9a6.6 6.6 0 003.9 1.3V7.4a3.9 3.9 0 01-3.8-3.8V2z"/></svg>
+        </span>
+        <span class="placa__texto">TikTok</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 — APRESENTAÇÃO DA TATUADORA ============ -->
+<section class="secao secao--artista" id="artista" data-secao="artista">
+  <div class="artista">
+
+    <figure class="quadro mold revelar-nevoa" data-atraso="0">
+      <div class="mold__janela">
+        <img src="assets/giovanna-4k.jpg" alt="Giovanna Reis, tatuadora">
+        <span class="quadro__nevoa" aria-hidden="true"></span>
+      </div>
+      <span class="mold__arte" aria-hidden="true"></span>
+    </figure>
+
+    <div class="artista__texto">
+      <h2 class="artista__nome revelar-nevoa" data-atraso="180">Giovanna Reis</h2>
+      <div class="artista__papel revelar-nevoa" data-atraso="300">
+        <span class="artista__filete" aria-hidden="true"></span>
+        <span>Tatuadora</span>
+        <span class="artista__filete artista__filete--inv" aria-hidden="true"></span>
+      </div>
+      <p class="artista__bio revelar-nevoa" data-atraso="420">
+        A arte na vida da Gio vem de herança<br>
+        de sua mãe, sua maior inspiração.<br>
+        Apaixonada por old school e blackwork,<br>
+        ela cria desenhos que traduzem força,<br>
+        contraste e personalidade.
+      </p>
+
+      <span class="artista__divisa revelar-nevoa" data-atraso="520" aria-hidden="true"></span>
+
+      <p class="artista__bio artista__bio--longa revelar-nevoa" data-atraso="600">
+        A paixão por traços marcantes, contrastes intensos e desenhos cheios de
+        personalidade inspira cada criação todos os dias. Entre referências
+        clássicas e uma linguagem mais contemporânea, flores, caveiras,
+        personagens e símbolos ganham formas únicas, unindo delicadeza, força e
+        uma estética sombria. Amo transformar aquilo que faz parte de mim e que
+        eu mais gosto em desenhos e tattoos, para que cada arte carregue uma
+        história e se torne algo único na pele.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ 03 — PORTFÓLIO ============ -->
+<section class="secao secao--portfolio" id="portfolio" data-secao="portfolio">
+
+  <header class="portfolio__cabeca revelar" data-atraso="0">
+    <span class="floreio floreio--esq" aria-hidden="true">
+      <svg viewBox="0 0 200 50" fill="none" stroke="currentColor" stroke-width="1.2">
+        <path d="M198 25h-60"/>
+        <path d="M138 25c-9-13-24-20-36-14-10 5-9 18 2 21 10 3 18-5 15-14-4-14-23-20-38-13"/>
+        <path d="M138 25c-9 13-24 20-36 14-10-5-9-18 2-21 10-3 18 5 15 14-4 14-23 20-38 13"/>
+        <path d="M44 25h-14" stroke="var(--rubi)"/>
+        <circle cx="26" cy="25" r="2.4" fill="var(--rubi)" stroke="none"/>
+      </svg>
+    </span>
+    <h2 class="portfolio__titulo">Portfólio</h2>
+    <span class="floreio floreio--dir" aria-hidden="true">
+      <svg viewBox="0 0 200 50" fill="none" stroke="currentColor" stroke-width="1.2">
+        <path d="M2 25h60"/>
+        <path d="M62 25c9-13 24-20 36-14 10 5 9 18-2 21-10 3-18-5-15-14 4-14 23-20 38-13"/>
+        <path d="M62 25c9 13 24 20 36 14 10-5 9-18-2-21-10-3-18 5-15 14 4 14 23 20 38 13"/>
+        <path d="M156 25h14" stroke="var(--rubi)"/>
+        <circle cx="174" cy="25" r="2.4" fill="var(--rubi)" stroke="none"/>
+      </svg>
+    </span>
+  </header>
+
+  <div class="carrossel revelar" data-atraso="200">
+    <button class="carrossel__seta carrossel__seta--esq" id="setaEsq" aria-label="Tattoos anteriores">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 5l-7 7 7 7"/></svg>
+    </button>
+
+    <div class="carrossel__janela" id="carrosselJanela">
+      <div class="carrossel__trilho" id="carrosselTrilho"><!-- preenchido por js --></div>
+    </div>
+
+    <button class="carrossel__seta carrossel__seta--dir" id="setaDir" aria-label="Próximas tattoos">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 5l7 7-7 7"/></svg>
+    </button>
+  </div>
+
+  <div class="carrossel__pontos" id="carrosselPontos" role="tablist" aria-label="Grupos do portfólio"></div>
+
+  <!-- painel lateral da história -->
+  <aside class="historia" id="historia" aria-hidden="true" aria-labelledby="historiaTitulo">
+    <span class="historia__nevoa" aria-hidden="true"></span>
+    <button class="historia__fechar" id="historiaFechar" aria-label="Fechar história">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <div class="historia__corpo">
+      <span class="historia__ornamento" aria-hidden="true">
+        <svg viewBox="0 0 160 30" fill="none" stroke="currentColor" stroke-width="1">
+          <path d="M4 15h50M106 15h50"/>
+          <path d="M80 4l3.6 7.4L91 15l-7.4 3.6L80 26l-3.6-7.4L69 15l7.4-3.6L80 4z" fill="var(--rubi)" stroke="none"/>
+          <path d="M60 15l4-4 4 4-4 4-4-4zM92 15l4-4 4 4-4 4-4-4z" fill="currentColor" stroke="none" opacity=".75"/>
+        </svg>
+      </span>
+      <figure class="historia__retrato"><img id="historiaImg" alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></figure>
+      <h3 class="historia__titulo" id="historiaTitulo"></h3>
+      <div class="historia__texto" id="historiaTexto"></div>
+    </div>
+  </aside>
+</section>
+
+<!-- ============ 04 — MEMÓRIAS ============ -->
+<section class="secao secao--memorias" id="memorias" data-secao="memorias">
+
+  <header class="memorias__cabeca revelar" data-atraso="0">
+    <span class="memorias__estrela" aria-hidden="true">
+      <svg viewBox="0 0 200 24" fill="none" stroke="currentColor" stroke-width=".9">
+        <path d="M10 12h74M116 12h74"/>
+        <path d="M100 1l2.6 7.4L110 11l-7.4 2.6L100 21l-2.6-7.4L90 11l7.4-2.6L100 1z" fill="currentColor" stroke="none"/>
+      </svg>
+    </span>
+    <h2 class="memorias__titulo">Não são só tattoos.<br>São memórias.</h2>
+    <p class="memorias__sub">momentos que permanecem</p>
+    <span class="memorias__regua" aria-hidden="true"></span>
+  </header>
+
+  <div class="memorias__grade">
+
+    <figure class="memoria revelar" data-atraso="160">
+      <div class="memoria__moldura mold">
+          <div class="mold__janela memoria__palco">
+            <video class="memoria__video" playsinline muted loop preload="metadata" poster="assets/capas/memoria-1.webp" src="assets/videos/memoria-1-cortado.mp4?v=1"></video>
+            <button class="memoria__play" aria-label="Reproduzir memória I">
+              <svg class="memoria__sinal memoria__sinal--play" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="38" stroke="currentColor" stroke-width="1.4"/><path d="M33 26l24 14-24 14V26z" fill="currentColor"/></svg>
+              <svg class="memoria__sinal memoria__sinal--pausa" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="38" stroke="currentColor" stroke-width="1.4"/><rect x="31" y="27" width="6.5" height="26" rx="1.4" fill="currentColor"/><rect x="42.5" y="27" width="6.5" height="26" rx="1.4" fill="currentColor"/></svg>
+            </button>
+          </div>
+          <span class="mold__arte" aria-hidden="true"></span>
+        </div>
+    </figure>
+
+    <figure class="memoria revelar" data-atraso="300">
+      <div class="memoria__moldura mold">
+          <div class="mold__janela memoria__palco">
+            <video class="memoria__video" playsinline muted loop preload="metadata" poster="assets/capas/memoria-2.webp" src="assets/videos/memoria-2.mp4?v=3"></video>
+            <button class="memoria__play" aria-label="Reproduzir memória II">
+              <svg class="memoria__sinal memoria__sinal--play" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="38" stroke="currentColor" stroke-width="1.4"/><path d="M33 26l24 14-24 14V26z" fill="currentColor"/></svg>
+              <svg class="memoria__sinal memoria__sinal--pausa" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="38" stroke="currentColor" stroke-width="1.4"/><rect x="31" y="27" width="6.5" height="26" rx="1.4" fill="currentColor"/><rect x="42.5" y="27" width="6.5" height="26" rx="1.4" fill="currentColor"/></svg>
+            </button>
+          </div>
+          <span class="mold__arte" aria-hidden="true"></span>
+        </div>
+    </figure>
+
+    <figure class="memoria revelar" data-atraso="440">
+      <div class="memoria__moldura mold">
+          <div class="mold__janela memoria__palco">
+            <video class="memoria__video" playsinline muted loop preload="metadata" poster="assets/capas/memoria-3.webp" src="assets/videos/memoria-3.mp4?v=3"></video>
+            <button class="memoria__play" aria-label="Reproduzir memória III">
+              <svg class="memoria__sinal memoria__sinal--play" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="38" stroke="currentColor" stroke-width="1.4"/><path d="M33 26l24 14-24 14V26z" fill="currentColor"/></svg>
+              <svg class="memoria__sinal memoria__sinal--pausa" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="38" stroke="currentColor" stroke-width="1.4"/><rect x="31" y="27" width="6.5" height="26" rx="1.4" fill="currentColor"/><rect x="42.5" y="27" width="6.5" height="26" rx="1.4" fill="currentColor"/></svg>
+            </button>
+          </div>
+          <span class="mold__arte" aria-hidden="true"></span>
+        </div>
+    </figure>
+
+  </div>
+</section>
+
+<!-- ============ 05 — AVALIAÇÕES ============ -->
+<section class="secao secao--avaliacoes" id="avaliacoes" data-secao="avaliacoes">
+
+  <header class="avaliacoes__cabeca revelar" data-atraso="0">
+    <span class="avaliacoes__orn" aria-hidden="true">
+      <svg viewBox="0 0 60 40" fill="none">
+        <path d="M30 4l2.6 11.4L44 18l-11.4 2.6L30 32l-2.6-11.4L16 18l11.4-2.6L30 4z" fill="var(--rubi)"/>
+        <path d="M8 18l4-5 4 5-4 5-4-5zM44 18l4-5 4 5-4 5-4-5z" fill="var(--rubi)" opacity=".7"/>
+      </svg>
+    </span>
+    <h2 class="avaliacoes__titulo">Avaliações Reais</h2>
+    <span class="avaliacoes__orn avaliacoes__orn--dir" aria-hidden="true">
+      <svg viewBox="0 0 60 40" fill="none">
+        <path d="M30 4l2.6 11.4L44 18l-11.4 2.6L30 32l-2.6-11.4L16 18l11.4-2.6L30 4z" fill="var(--rubi)"/>
+        <path d="M8 18l4-5 4 5-4 5-4-5zM44 18l4-5 4 5-4 5-4-5z" fill="var(--rubi)" opacity=".7"/>
+      </svg>
+    </span>
+    <span class="avaliacoes__regua" aria-hidden="true"></span>
+  </header>
+
+  <div class="avaliacoes__grade">
+
+    <article class="avaliacao revelar" data-atraso="160">
+      <div class="avaliacao__moldura">
+        <div class="avaliacao__interno">
+          <figure class="avaliacao__foto"><img src="assets/tattoos/t05-rosa.webp" alt="Tattoo de rosa vermelha no braço"></figure>
+          <div class="avaliacao__painel">
+            <h3 class="avaliacao__rotulo">Comentários</h3>
+            <ul class="comentarios">
+              <li class="comentario">
+                <span class="comentario__avatar" aria-hidden="true"></span>
+                <div class="comentario__corpo">
+                  <p class="comentario__cabeca"><span class="comentario__user">luis.revil</span><span class="comentario__quando">1 sem</span></p>
+                  <p class="comentario__texto">Que flor bonita, cheia dos detalhes 👏👏</p>
+                  <p class="comentario__acoes"><span>1 curtida</span><span>Responder</span></p>
+                </div>
+                <span class="comentario__coracao" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 20s-7-4.4-7-9a4 4 0 017-2.6A4 4 0 0119 11c0 4.6-7 9-7 9z"/></svg>
+                </span>
+              </li>
+              <li class="comentario">
+                <span class="comentario__avatar" aria-hidden="true"></span>
+                <div class="comentario__corpo">
+                  <p class="comentario__cabeca"><span class="comentario__user">gabriella__reis</span><span class="comentario__quando">1 sem</span></p>
+                  <p class="comentario__texto">Que delicadeza!</p>
+                  <p class="comentario__acoes"><span>1 curtida</span><span>Responder</span></p>
+                </div>
+                <span class="comentario__coracao" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 20s-7-4.4-7-9a4 4 0 017-2.6A4 4 0 0119 11c0 4.6-7 9-7 9z"/></svg>
+                </span>
+              </li>
+              <li class="comentario">
+                <span class="comentario__avatar" aria-hidden="true"></span>
+                <div class="comentario__corpo">
+                  <p class="comentario__cabeca"><span class="comentario__user">cayke_23</span><span class="comentario__quando">1 sem</span></p>
+                  <p class="comentario__texto">Perfeita demais</p>
+                  <p class="comentario__acoes"><span>Responder</span></p>
+                </div>
+                <span class="comentario__coracao" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 20s-7-4.4-7-9a4 4 0 017-2.6A4 4 0 0119 11c0 4.6-7 9-7 9z"/></svg>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="avaliacao revelar" data-atraso="300">
+      <div class="avaliacao__moldura">
+        <div class="avaliacao__interno">
+          <figure class="avaliacao__foto"><img src="assets/tattoos/t04-jack.webp" alt="Tattoo de Jack e Sally em moldura no ombro"></figure>
+          <div class="avaliacao__painel">
+            <h3 class="avaliacao__rotulo">Comentários</h3>
+            <ul class="comentarios">
+              <li class="comentario">
+                <span class="comentario__avatar" aria-hidden="true"></span>
+                <div class="comentario__corpo">
+                  <p class="comentario__cabeca"><span class="comentario__user">patricia_jorge_franco</span><span class="comentario__quando">2 sem</span></p>
+                  <p class="comentario__texto">Perfeita 🤩</p>
+                  <p class="comentario__acoes"><span>1 curtida</span><span>Responder</span></p>
+                  <p class="comentario__respostas"><span class="comentario__tracinho" aria-hidden="true"></span>Ver todas as 1 respostas</p>
+                </div>
+                <span class="comentario__coracao" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 20s-7-4.4-7-9a4 4 0 017-2.6A4 4 0 0119 11c0 4.6-7 9-7 9z"/></svg>
+                </span>
+              </li>
+              <li class="comentario">
+                <span class="comentario__avatar" aria-hidden="true"></span>
+                <div class="comentario__corpo">
+                  <p class="comentario__cabeca"><span class="comentario__user">drake91_</span><span class="comentario__quando">2 sem</span></p>
+                  <p class="comentario__texto">Aiiiirrrr ❤️❤️</p>
+                  <p class="comentario__acoes"><span>1 curtida</span><span>Responder</span></p>
+                  <p class="comentario__respostas"><span class="comentario__tracinho" aria-hidden="true"></span>Ver todas as 1 respostas</p>
+                </div>
+                <span class="comentario__coracao" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 20s-7-4.4-7-9a4 4 0 017-2.6A4 4 0 0119 11c0 4.6-7 9-7 9z"/></svg>
+                </span>
+              </li>
+              <li class="comentario">
+                <span class="comentario__avatar" aria-hidden="true"></span>
+                <div class="comentario__corpo">
+                  <p class="comentario__cabeca"><span class="comentario__user">jyouseii</span><span class="comentario__quando">2 sem</span></p>
+                  <p class="comentario__texto">Incrível ✨</p>
+                  <p class="comentario__acoes"><span>Responder</span></p>
+                </div>
+                <span class="comentario__coracao" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 20s-7-4.4-7-9a4 4 0 017-2.6A4 4 0 0119 11c0 4.6-7 9-7 9z"/></svg>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="avaliacao revelar" data-atraso="440">
+      <div class="avaliacao__moldura">
+        <div class="avaliacao__interno">
+          <figure class="avaliacao__foto"><img src="assets/tattoos/t15-noiva.webp" alt="Tattoo de noiva em moldura no braço"></figure>
+          <div class="avaliacao__painel">
+            <h3 class="avaliacao__rotulo">Comentários</h3>
+            <ul class="comentarios">
+              <li class="comentario">
+                <span class="comentario__avatar" aria-hidden="true"></span>
+                <div class="comentario__corpo">
+                  <p class="comentario__cabeca"><span class="comentario__user">gabriella__reis</span><span class="comentario__quando">16 sem</span></p>
+                  <p class="comentario__texto">Que linda!! 🤍🤍🤍</p>
+                  <p class="comentario__acoes"><span>1 curtida</span><span>Responder</span></p>
+                  <p class="comentario__respostas"><span class="comentario__tracinho" aria-hidden="true"></span>Ver todas as 1 respostas</p>
+                </div>
+                <span class="comentario__coracao" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 20s-7-4.4-7-9a4 4 0 017-2.6A4 4 0 0119 11c0 4.6-7 9-7 9z"/></svg>
+                </span>
+              </li>
+              <li class="comentario">
+                <span class="comentario__avatar" aria-hidden="true"></span>
+                <div class="comentario__corpo">
+                  <p class="comentario__cabeca"><span class="comentario__user">karine_cremasco</span><span class="comentario__quando">16 sem</span></p>
+                  <p class="comentario__texto">Amei ❤️❤️</p>
+                  <p class="comentario__acoes"><span>1 curtida</span><span>Responder</span><span>Ver tradução</span></p>
+                  <p class="comentario__respostas"><span class="comentario__tracinho" aria-hidden="true"></span>Ver todas as 1 respostas</p>
+                </div>
+                <span class="comentario__coracao" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 20s-7-4.4-7-9a4 4 0 017-2.6A4 4 0 0119 11c0 4.6-7 9-7 9z"/></svg>
+                </span>
+              </li>
+              <li class="comentario">
+                <span class="comentario__avatar" aria-hidden="true"></span>
+                <div class="comentario__corpo">
+                  <p class="comentario__cabeca"><span class="comentario__user">marciake.777</span><span class="comentario__quando">16 sem</span></p>
+                  <p class="comentario__texto">😍😍😍😍😍😍</p>
+                  <p class="comentario__acoes"><span>Responder</span></p>
+                </div>
+                <span class="comentario__coracao" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 20s-7-4.4-7-9a4 4 0 017-2.6A4 4 0 0119 11c0 4.6-7 9-7 9z"/></svg>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============ 06 — IDEIAS / CONTATO FINAL ============ -->
+<section class="secao secao--ideias" id="ideias" data-secao="ideias">
+
+  <header class="ideias__cabeca revelar" data-atraso="0">
+    <span class="ideias__orn" aria-hidden="true">
+      <svg viewBox="0 0 140 20" fill="none">
+        <circle cx="46" cy="10" r="1.6" fill="var(--rubi)"/><circle cx="56" cy="10" r="1.6" fill="var(--rubi)"/>
+        <path d="M70 1l2.4 6.6L79 10l-6.6 2.4L70 19l-2.4-6.6L61 10l6.6-2.4L70 1z" fill="var(--rubi)"/>
+        <circle cx="84" cy="10" r="1.6" fill="var(--creme)"/><circle cx="94" cy="10" r="1.6" fill="var(--creme)"/>
+      </svg>
+    </span>
+    <h2 class="ideias__titulo">Vamos dar vida<br>à sua ideia?</h2>
+    <p class="ideias__sub">Me conte o que você imagina.</p>
+  </header>
+
+  <div class="ideias__palco">
+
+    <form class="ficha revelar" data-atraso="180" id="fichaIdeia" novalidate>
+
+      <label class="campo campo--grande">
+        <span class="campo__selo campo__selo--baixo" aria-hidden="true"></span>
+        <textarea id="campoIdeia" name="ideia" rows="6" required
+                  aria-label="Conte sua ideia de tattoo"
+                  aria-describedby="campoExemplo"></textarea>
+        <div class="fantasma" id="campoExemplo" aria-hidden="true">
+          <span class="fantasma__chamada">Conte sua ideia de tattoo</span>
+          <span class="fantasma__linhas" id="fantasmaLinhas"></span>
+        </div>
+      </label>
+
+      <button type="submit" class="enviar">
+        <span class="enviar__estrela" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.2 7.8L22 11l-7.8 2.2L12 21l-2.2-7.8L2 11l7.8-2.2L12 1z"/></svg>
+        </span>
+        <span class="enviar__texto">Enviar minha ideia</span>
+        <span class="enviar__estrela" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.2 7.8L22 11l-7.8 2.2L12 21l-2.2-7.8L2 11l7.8-2.2L12 1z"/></svg>
+        </span>
+      </button>
+    </form>
+
+    <div class="ideias__gato revelar" data-atraso="320" aria-hidden="true">
+      <img src="assets/gato.webp" alt="">
+    </div>
+  </div>
+
+  <div class="ideias__canais revelar" data-atraso="440">
+    <a class="canal" href="#" data-wa="rodape" rel="noopener">
+      <span class="canal__icone" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5.1-1.3A10 10 0 1012 2zm0 1.8a8.2 8.2 0 11-4.2 15.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0112 3.8zm-3.3 4c-.2 0-.5.1-.7.4-.3.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.8 4.3 3.8 2.1.8 2.5.7 3 .6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3l-1.7-.8c-.2-.1-.4-.2-.6.1l-.8 1c-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5 0-.2 0-.4-.1-.5l-.8-1.9c-.2-.4-.4-.4-.6-.4h-.6z"/></svg>
+      </span>
+      <span>WhatsApp</span>
+      <span class="canal__estrela" aria-hidden="true">✦</span>
+    </a>
+    <a class="canal" href="https://instagram.com/gio.tattooink" target="_blank" rel="noopener noreferrer">
+      <span class="canal__icone" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5.2"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor" stroke="none"/></svg>
+      </span>
+      <span>Instagram</span>
+      <span class="canal__estrela" aria-hidden="true">✦</span>
+    </a>
+    <a class="canal" href="https://www.tiktok.com/@giovannareis.tattoo?_r=1&amp;_t=ZS-9AU5T5b7Vcj" target="_blank" rel="noopener noreferrer">
+      <span class="canal__icone" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.1 2h-2.8v13.1a2.4 2.4 0 11-2.4-2.4c.2 0 .5 0 .7.1v-2.8a5.6 5.6 0 00-.7 0A5.2 5.2 0 1016 15.1V8.9a6.6 6.6 0 003.9 1.3V7.4a3.9 3.9 0 01-3.8-3.8V2z"/></svg>
+      </span>
+      <span>TikTok <em>@giovannareis.tattoo</em></span>
+      <span class="canal__estrela" aria-hidden="true">✦</span>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<nav class="agendamento-fixo" aria-label="Agendamento rápido">
+  <a class="agendamento-fixo__link" href="#" data-wa="fixo" rel="noopener" aria-label="Agendar pelo WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5.1-1.3A10 10 0 1012 2zm0 1.8a8.2 8.2 0 11-4.2 15.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0112 3.8zm-3.3 4c-.2 0-.5.1-.7.4-.3.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.8 4.3 3.8 2.1.8 2.5.7 3 .6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3l-1.7-.8c-.2-.1-.4-.2-.6.1l-.8 1c-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5 0-.2 0-.4-.1-.5l-.8-1.9c-.2-.4-.4-.4-.6-.4h-.6z"/></svg>
+    <span>Agendar no WhatsApp</span>
+  </a>
+  <a class="agendamento-fixo__link" href="https://instagram.com/gio.tattooink" target="_blank" rel="noopener noreferrer" aria-label="Agendar pelo Instagram">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.2"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor" stroke="none"/></svg>
+    <span>Agendar no Instagram</span>
+  </a>
+</nav>
+
+<!-- ============ CONFIRMAÇÃO DE ENVIO ============ -->
+<div class="veu" id="veu" hidden>
+  <div class="dialogo" role="dialog" aria-modal="true" aria-labelledby="dialogoTitulo">
+    <span class="dialogo__nevoa" aria-hidden="true"></span>
+    <span class="dialogo__bruma" aria-hidden="true"></span>
+    <button class="dialogo__fechar" id="dialogoFechar" aria-label="Fechar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <div class="dialogo__corpo" id="dialogoCorpo"></div>
+  </div>
+</div>
+
+<div class="sussurro" id="sussurro" role="status" aria-live="polite"></div>
+
+<!-- ============ TRILHA ============ -->
+<audio id="tema" loop preload="auto" src="assets/audio/tema.m4a"></audio>
+
+<button class="trilha" id="trilhaBotao" aria-pressed="false" aria-label="Ligar a trilha">
+  <span class="trilha__icone" aria-hidden="true">
+    <svg class="trilha__onda" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+      <path d="M4 9.5h3L11 6v12l-4-3.5H4z" fill="currentColor" stroke-linejoin="round"/>
+      <path class="trilha__arco trilha__arco--a" d="M14.6 9.2a4 4 0 010 5.6"/>
+      <path class="trilha__arco trilha__arco--b" d="M17.3 6.5a7.8 7.8 0 010 11"/>
+    </svg>
+    <span class="trilha__corte" aria-hidden="true"></span>
+  </span>
+  <span class="trilha__texto">trilha</span>
+</button>
+
+<script src="js/dados.js?v=50"></script>
+<script src="js/main.js?v=50"></script>
+</body>
+</html>
